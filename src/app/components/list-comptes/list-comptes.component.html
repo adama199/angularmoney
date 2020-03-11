@@ -1,0 +1,19 @@
+<table class="table">
+  <thead class="thead-blue">
+    <tr>
+      <th scope="col">Prenom</th>
+      <th scope="col">Nom</th>
+      <th scope="col">N° compte</th>
+      <th scope="col">Montant</th>
+      <th scope="col">Date de creation</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let compte of comptes">
+      <td>{{ compte.numCompte }}</td>
+      <td>{{ compte.montant }}</td>
+    </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,28 @@
+<app-slidebar></app-slidebar>
+<table class="table" style="width: 1000px; margin-left:auto; margin-bottom: -500px">
+  <thead class="thead-blue">
+    <tr>
+      <th scope="col">Prenom</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Login</th>
+      <th scope="col">Profil</th>
+      <th scope="col">Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of dataUsers">
+      <td>{{ user.prenom }}</td>
+      <td>{{ user.nom }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.roles }}</td>
+      <td>
+        <div *ngIf="user.isActive; else elseBlock">
+          <button class="btn btn-success" (click)="onStatus(user.id)">Activé</button>
+        </div>
+        <ng-template #elseBlock>
+          <button class="btn btn-danger" (click)="onStatus(user.id)">Désctivé</button>
+        </ng-template>
+      </td>
+    </tr>
+  </tbody>
+</table>

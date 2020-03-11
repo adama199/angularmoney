@@ -1,0 +1,30 @@
+<div class="contenair">
+
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-12">
+
+  </div>
+  <div class="col-md-4"></div>
+    <div class="form-login mt-5 p-5">
+    <div class="text-center mb-1">
+      <i class="fa fa-users fa-3x" aria-hidden="true" style="color: #056BB3; padding: -5"></i>
+    </div>
+    <form [formGroup]="loginForm">
+
+      <div class="form-group">
+        <fa-icon [icon]="iconUser"></fa-icon>
+        <input type="text" class="form-control" placeholder="Login" formControlName="email">
+
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Password" formControlName="password">
+      </div>
+      <div class="text-center mb-3">
+        <button class="btn btn-primary" id='btn-login' type="submit" (click)="onSubmit()">Connexion</button>
+      </div>
+    </form>
+  </div>
+  </div>
+</div>
+
